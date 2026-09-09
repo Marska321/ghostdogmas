@@ -1,0 +1,15 @@
+{
+  "name": "ghost-dogmas",
+  "version": "1.0.0",
+  "description": "Ghost Dogmas: Re-wiring the Subconscious Theology of Your Nervous System by Mario Botha",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["book", "deconstruction", "somatic", "nervous-system"],
+  "author": "Mario Botha",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
