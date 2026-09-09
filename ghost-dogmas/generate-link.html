@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mario's Dispatch Tool | Ghost Dogmas Link Generator</title>
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#FAF9F6',
+            'paper-subtle': '#F4F1EA',
+            'card-border': '#E5E0D8',
+            'espresso': '#1C1917',
+            'warm-stone': '#57534E',
+            'muted-stone': '#78716C',
+            'terracotta': '#C06E52',
+            'sage': '#768A7E',
+            'sage-light': '#F2F5F3',
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-paper text-espresso antialiased min-h-screen p-6 sm:p-12 flex items-center justify-center">
+
+  <div class="max-w-lg w-full bg-white rounded-2xl border border-card-border p-6 sm:p-8 shadow-card">
+    
+    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-card-border">
+      <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center font-serif font-bold text-lg">
+        GD
+      </div>
+      <div>
+        <h1 class="font-serif font-bold text-lg text-espresso">POP Link Dispatch Generator</h1>
+        <p class="text-xs text-muted-stone">Generate single-use, 2-download links upon receiving POP</p>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="space-y-4">
+      <div>
+        <label for="buyerName" class="block text-xs font-semibold uppercase tracking-wider text-muted-stone mb-1">
+          Buyer's Name or Reference
+        </label>
+        <input 
+          type="text" 
+          id="buyerName" 
+          placeholder="e.g. David / GD-David" 
+          class="w-full px-3.5 py-2.5 bg-paper rounded-xl border border-card-border text-espresso text-sm focus:outline-none focus:border-terracotta"
+        />
+      </div>
+
+      <div>
+        <label for="buyerPhone" class="block text-xs font-semibold uppercase tracking-wider text-muted-stone mb-1">
+          Buyer's WhatsApp Phone Number (Optional)
+        </label>
+        <input 
+          type="tel" 
+          id="buyerPhone" 
+          placeholder="e.g. 0821234567 or 27821234567" 
+          class="w-full px-3.5 py-2.5 bg-paper rounded-xl border border-card-border text-espresso text-sm focus:outline-none focus:border-terracotta"
+        />
+      </div>
+
+      <button 
+        type="button" 
+        id="genBtn" 
+        class="btn-terracotta w-full py-3 text-sm font-semibold flex items-center justify-center gap-2"
+      >
+        <span>Generate Single-Use Link</span>
+      </button>
+    </div>
+
+    <!-- Generated Result Box -->
+    <div id="resultBox" class="mt-6 p-4 rounded-xl bg-paper-subtle border border-card-border hidden space-y-3">
+      <div class="flex justify-between items-center text-xs">
+        <span class="font-semibold text-espresso">Generated Link:</span>
+        <span class="text-[10px] text-sage font-medium bg-sage-light px-2 py-0.5 rounded border border-sage/30">Quota: 2 Downloads Max</span>
+      </div>
+
+      <div class="p-2.5 bg-white rounded-lg border border-card-border font-mono text-xs text-espresso break-all select-all" id="outputUrl">
+        <!-- url appears here -->
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+        <button 
+          type="button" 
+          id="copyBtn" 
+          class="py-2.5 px-3 rounded-xl border border-card-border hover:border-terracotta text-xs font-medium text-espresso flex items-center justify-center gap-1.5 bg-white transition-colors"
+        >
+          <span id="copyBtnText">Copy Link</span>
+        </button>
+
+        <a 
+          id="whatsappShareBtn" 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-sm text-center"
+        >
+          <span>Send on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-card-border text-center text-xs text-muted-stone">
+      <p>Ghost Dogmas Dispatch Portal &bull; Mario Botha</p>
+    </div>
+
+  </div>
+
+  <script>
+    const buyerNameInput = document.getElementById('buyerName');
+    const buyerPhoneInput = document.getElementById('buyerPhone');
+    const genBtn = document.getElementById('genBtn');
+    const resultBox = document.getElementById('resultBox');
+    const outputUrl = document.getElementById('outputUrl');
+    const copyBtn = document.getElementById('copyBtn');
+    const copyBtnText = document.getElementById('copyBtnText');
+    const whatsappShareBtn = document.getElementById('whatsappShareBtn');
+
+    function generateRandomToken() {
+      return 'gd_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+    }
+
+    genBtn.addEventListener('click', () => {
+      const name = buyerNameInput.value.trim() || 'Reader';
+      const token = generateRandomToken();
+      
+      const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+      const accessUrl = `${baseUrl}access-download.html?token=${token}&user=${encodeURIComponent(name)}`;
+
+      outputUrl.textContent = accessUrl;
+      resultBox.classList.remove('hidden');
+
+      // WhatsApp link setup
+      let rawPhone = buyerPhoneInput.value.trim().replace(/[^0-9]/g, '');
+      if (rawPhone.startsWith('0')) {
+        rawPhone = '27' + rawPhone.substring(1);
+      }
+      
+      const message = `Hi ${name}, thank you for your payment! Here is your private single-use download link for Ghost Dogmas:\n\n${accessUrl}\n\n(This link allows 2 downloads for your personal devices). Happy reading!`;
+      
+      const waUrl = rawPhone 
+        ? `https://wa.me/${rawPhone}?text=${encodeURIComponent(message)}`
+        : `https://wa.me/?text=${encodeURIComponent(message)}`;
+
+      whatsappShareBtn.href = waUrl;
+    });
+
+    copyBtn.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(outputUrl.textContent).then(() => {
+          copyBtnText.textContent = 'Copied!';
+          setTimeout(() => { copyBtnText.textContent = 'Copy Link'; }, 2000);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

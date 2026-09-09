@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghost Dogmas: Re-wiring the Subconscious Theology of Your Nervous System | Mario Botha</title>
+  <meta name="description" content="A practical field guide to somatic reconstruction for the post-religious soul by Mario Botha. Clear subconscious survival wiring, panic, and unearned guilt." />
+  
+  <!-- OpenGraph & Social Sharing Meta Tags -->
+  <meta property="og:title" content="Ghost Dogmas | Mario Botha" />
+  <meta property="og:description" content="A practical field guide to somatic reconstruction for the post-religious soul." />
+  <meta property="og:image" content="cover.jpg" />
+  <meta property="og:type" content="book" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ghost Dogmas | Mario Botha" />
+  <meta name="twitter:description" content="A practical field guide to somatic reconstruction for the post-religious soul." />
+  <meta name="twitter:image" content="cover.jpg" />
+
+  <!-- Tailwind CSS & Editorial Google Fonts -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#FAF9F6',
+            'paper-subtle': '#F4F1EA',
+            'card-border': '#E5E0D8',
+            'espresso': '#1C1917',
+            'warm-stone': '#57534E',
+            'muted-stone': '#78716C',
+            'terracotta': '#C06E52',
+            'terracotta-dark': '#A85B42',
+            'terracotta-light': '#FBF4F0',
+            'terracotta-border': '#E8D5CE',
+            'sage': '#768A7E',
+            'sage-light': '#F2F5F3',
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-paper text-espresso antialiased selection:bg-terracotta/20 selection:text-espresso relative">
+
+  <!-- Gentle ambient sunlight glow -->
+  <div class="sunlight-ambient" aria-hidden="true"></div>
+  <div class="sunlight-ambient-warm" aria-hidden="true"></div>
+
+  <!-- Minimalist Editorial Navigation -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-paper/90 border-b border-card-border/60 transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 text-decoration-none group">
+        <div class="w-8 h-8 rounded-full bg-terracotta-light border border-terracotta/30 flex items-center justify-center text-terracotta">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v8"></path>
+            <path d="m4.93 10.93 1.41 1.41"></path>
+            <path d="M2 18h2"></path>
+            <path d="M20 18h2"></path>
+            <path d="m19.07 10.93-1.41 1.41"></path>
+            <path d="M22 22H2"></path>
+            <path d="m8 22 4-10 4 10"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif tracking-wider text-base font-semibold text-espresso">Ghost Dogmas</span>
+          <span class="text-[10px] tracking-widest uppercase text-muted-stone font-medium">By Mario Botha</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-stone">
+        <a href="#reality" class="hover:text-terracotta transition-colors">The Reality</a>
+        <a href="#fieldguide" class="hover:text-terracotta transition-colors">Inside the Guide</a>
+        <a href="#author" class="hover:text-terracotta transition-colors">The Author</a>
+        <a href="#faq" class="hover:text-terracotta transition-colors">Questions</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="btn-outline-terracotta text-xs sm:text-sm">
+          <span>Get the Ebook</span>
+        </a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="mobileMenuToggle" class="md:hidden p-2 text-espresso hover:text-terracotta rounded-lg focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNavMenu" class="mobile-nav-menu flex-col px-6 py-4 bg-paper border-b border-card-border md:hidden space-y-3 text-sm font-medium text-warm-stone">
+      <a href="#reality" class="mobile-nav-link hover:text-terracotta py-1">The Reality</a>
+      <a href="#fieldguide" class="mobile-nav-link hover:text-terracotta py-1">Inside the Guide</a>
+      <a href="#author" class="mobile-nav-link hover:text-terracotta py-1">The Author</a>
+      <a href="#faq" class="mobile-nav-link hover:text-terracotta py-1">Questions</a>
+      <a href="#pricing" class="mobile-nav-link text-terracotta font-semibold py-1">Support &amp; Download</a>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- ================= HEADER / HERO ================= -->
+    <section id="hero" class="pt-16 pb-20 md:pt-24 md:pb-28">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-terracotta-light border border-terracotta-border/70 mb-8 reveal">
+          <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+          <span class="text-xs font-semibold tracking-widest uppercase text-terracotta">
+            Somatic Reconstruction for the Post-Religious Soul
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-semibold text-espresso leading-[1.18] tracking-tight mb-7 reveal">
+          You changed your mind. <br class="hidden sm:inline" />
+          <span class="italic text-terracotta font-normal">Your nervous system didn't get the memo.</span>
+        </h1>
+
+        <!-- Sub-Headline -->
+        <p class="text-lg sm:text-xl text-warm-stone font-light leading-relaxed max-w-2xl mx-auto mb-10 reveal">
+          Intellectual deconstruction is clean, but genuine peace is a biological achievement. A practical field guide to resolving the residual anxiety, phantom guilt, and survival wiring left behind by high-demand religion.
+        </p>
+
+        <!-- Primary Action -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 reveal">
+          <a href="#pricing" class="btn-terracotta w-full sm:w-auto">
+            <span>Choose Your Contribution &amp; Read the Ebook</span>
+            <svg class="w-4 h-4 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+        <p class="text-xs text-muted-stone mb-16 reveal">
+          Pay What You Want &bull; DRM-Free Digital Publication Package
+        </p>
+
+        <!-- Media Container: Minimalist Book Preview & Warm-Lit Video Embed -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center text-left reveal">
+          
+          <!-- Left: Realistic 3D Book Showcase with Real Cover -->
+          <div class="md:col-span-6 flex justify-center">
+            <div class="book-3d-scene">
+              <div class="book-3d-container">
+                <div class="book-3d-front">
+                  <img src="cover.jpg" alt="Ghost Dogmas: Re-wiring the Subconscious Theology of Your Nervous System by Mario Botha" class="w-full h-full object-cover" />
+                </div>
+                <div class="book-3d-spine">
+                  <span>GHOST DOGMAS &bull; MARIO BOTHA</span>
+                </div>
+                <div class="book-3d-pages"></div>
+                <div class="book-3d-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Direct Custom Contribution Box -->
+          <div class="md:col-span-6 flex flex-col justify-center">
+            <div class="checkout-sanctuary-card p-6 bg-white rounded-2xl border border-card-border shadow-sm">
+              
+              <div class="mb-5 text-left">
+                <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-1">
+                  Pay What You Want
+                </span>
+                <h3 class="text-2xl font-serif font-semibold text-espresso">
+                  Name Your Contribution
+                </h3>
+                <p class="text-xs text-warm-stone mt-1 leading-relaxed">
+                  Decide what feels aligned to claim your digital field guide.
+                </p>
+              </div>
+
+              <!-- Single Custom Input Field -->
+              <div class="mb-4">
+                <label for="heroCustomAmount" class="block text-[11px] font-semibold uppercase tracking-wider text-muted-stone mb-1.5">
+                  Your Contribution Amount ($ USD)
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-espresso font-semibold text-lg">$</span>
+                  <input 
+                    type="number" 
+                    id="heroCustomAmount" 
+                    step="1" 
+                    placeholder="0" 
+                    class="w-full pl-8 pr-12 py-2.5 bg-paper rounded-lg border border-card-border text-espresso font-serif text-xl font-bold focus:outline-none focus:border-terracotta"
+                    aria-label="Your custom contribution in USD"
+                  />
+                  <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-xs font-medium text-muted-stone">USD</span>
+                </div>
+                <p class="text-[11px] text-muted-stone mt-1">Book delivered directly to your email upon payment / POP receipt</p>
+              </div>
+
+              <!-- Quick Format Confirmation -->
+              <div class="mb-5 p-3 rounded-lg bg-paper-subtle border border-card-border flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-sage"></span>
+                <span class="text-xs text-warm-stone font-medium">Includes DRM-Free PDF &amp; EPUB (Kindle / Apple Books)</span>
+              </div>
+
+              <!-- Primary Trigger -->
+              <button type="button" class="btn-terracotta w-full flex items-center justify-center gap-2" id="heroCheckoutBtn">
+                <span>Proceed to Secure Checkout</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+
+              <!-- Not Convinced Yet Deep Dive Link -->
+              <div class="mt-3.5 text-center">
+                <a href="deep-dive.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta hover:text-terracotta-dark transition-colors py-1 group">
+                  <span>Not Convinced Yet? Read the Executive Summary</span>
+                  <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 1: THE LIVED REALITY ================= -->
+    <section id="reality" class="py-20 md:py-28 bg-white border-y border-card-border">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-16 reveal">
+          <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-2">The Deconstruction Gap</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-4">
+            The Remodeling Illusion
+          </h2>
+          <p class="text-base text-warm-stone font-light leading-relaxed">
+            You logically evicted the dogma, re-read church history, and won every intellectual debate. Yet in moments of quiet or rest, your physiology behaves like you are still on trial.
+          </p>
+        </div>
+
+        <!-- 3-Column Minimal Grid (White cards, soft borders) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          
+          <!-- Card 1 -->
+          <div class="sanctuary-card reveal">
+            <span class="card-number">01</span>
+            <h3 class="text-xl font-serif font-semibold text-espresso mb-2">The Sunday Alarm</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Why waking up outside the church still triggers fight-or-flight heart rates and morning dread &mdash; as though absence invites immediate divine consequence.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="sanctuary-card reveal">
+            <span class="card-number">02</span>
+            <h3 class="text-xl font-serif font-semibold text-espresso mb-2">The Effort Trap</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              The persistent feeling that you must constantly work, justify, and struggle just to earn your right to exist &mdash; turning stillness into unbearable guilt.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="sanctuary-card reveal">
+            <span class="card-number">03</span>
+            <h3 class="text-xl font-serif font-semibold text-espresso mb-2">The Internalized Judge</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Projecting the watchful surveillance of childhood faith onto your career, partners, and inner voice &mdash; perpetually anticipating reprimand or catastrophe.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Quote Break (Centered large serif text) -->
+      <div class="editorial-quote-break reveal">
+        <blockquote class="editorial-quote-text">
+          &ldquo;You cannot repair the wiring in the basement by sending an intellectual debate team to the penthouse.&rdquo;
+        </blockquote>
+        <div class="mt-4 text-xs font-semibold tracking-widest uppercase text-muted-stone">
+          &mdash; Mario Botha, <cite class="font-normal not-italic">Ghost Dogmas</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: INSIDE THE FIELD GUIDE ================= -->
+    <section id="fieldguide" class="py-20 md:py-28">
+      <div class="max-w-5xl mx-auto px-6 sm:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-16 reveal">
+          <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-2">Clinical Yet Compassionate</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-4">
+            Inside the Field Guide
+          </h2>
+          <p class="text-base text-warm-stone font-light leading-relaxed">
+            A body-first approach designed to dissolve old conditioning where it actually lives: inside your autonomic nervous system.
+          </p>
+        </div>
+
+        <!-- Clean Minimalist 2-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+          
+          <!-- Item 1 -->
+          <div class="fieldguide-item">
+            <div class="fieldguide-tag">
+              <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+              The Spectrum of Compliance
+            </div>
+            <h3 class="text-lg font-serif font-semibold text-espresso mb-2">The Sinner–Saint Spectrum</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Why compliance was your body's early survival currency, and how to step off the good/bad binary entirely into innate, unconditional baseline worth.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="fieldguide-item">
+            <div class="fieldguide-tag">
+              <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+              Neurochemical Foundations
+            </div>
+            <h3 class="text-lg font-serif font-semibold text-espresso mb-2">The Chemistry of Belief</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Why unearned rest triggers chemical alarms (CCK) in post-religious bodies, turning emotional guilt into physical gut knots and muscular armor &mdash; and how to soothe them.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="fieldguide-item">
+            <div class="fieldguide-tag">
+              <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+              Predictive Rewiring
+            </div>
+            <h3 class="text-lg font-serif font-semibold text-espresso mb-2">Action Before Understanding</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Physical, somatic practices that rewrite predictive survival patterns without relying on forced willpower or mental affirmations.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="fieldguide-item">
+            <div class="fieldguide-tag">
+              <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+              Ancestral Autonomy
+            </div>
+            <h3 class="text-lg font-serif font-semibold text-espresso mb-2">Releasing Lineage Guilt</h3>
+            <p class="text-sm text-warm-stone leading-relaxed">
+              Resolving the subconscious feeling that thriving outside the faith is a betrayal of your family’s shared suffering and generational expectations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: NOTE FROM THE AUTHOR ================= -->
+    <section id="author" class="py-20 md:py-28 bg-white border-t border-card-border">
+      <div class="max-w-5xl mx-auto px-6 sm:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          
+          <!-- Author Portrait (Warm, Candid, Natural Light) -->
+          <div class="md:col-span-5 flex justify-center reveal">
+            <div class="author-frame w-full">
+              <div class="author-image-editorial p-4 bg-paper">
+                <div class="aspect-[4/5] rounded-lg overflow-hidden relative flex flex-col justify-end p-6 bg-gradient-to-t from-stone-900/70 via-stone-800/20 to-transparent">
+                  <!-- Warm natural light candid portrait vector/silhouette -->
+                  <div class="absolute inset-0 bg-[#EFE9DF] flex items-center justify-center">
+                    <svg class="w-48 h-48 text-stone-400/40" viewBox="0 0 200 200" fill="none">
+                      <circle cx="100" cy="70" r="32" stroke="currentColor" stroke-width="2"/>
+                      <path d="M55 165 C55 120, 75 115, 100 115 C125 115, 145 120, 145 165" stroke="currentColor" stroke-width="2"/>
+                      <path d="M100 20 L160 160" stroke="#E5C7A8" stroke-width="12" opacity="0.25"/>
+                    </svg>
+                  </div>
+                  
+                  <div class="relative z-10 p-3 rounded-lg bg-white/95 backdrop-blur-sm border border-card-border shadow-sm">
+                    <div class="font-serif font-semibold text-espresso text-base">Mario Botha</div>
+                    <div class="text-[11px] text-terracotta font-medium">Former pastor of 20+ years &bull; Somatic Change Practitioner</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Copy -->
+          <div class="md:col-span-7 reveal">
+            <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-2">Note from the Author</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-6 leading-tight">
+              A roadmap born from twenty years of ministry &amp; biological exile.
+            </h2>
+            <div class="space-y-4 text-warm-stone text-base leading-relaxed font-light">
+              <p>
+                &ldquo;For more than twenty years, I lived at the center of high-demand ministry&mdash;planting churches at 20, preaching internationally, and consulting nationwide. When I walked away, I discovered that logic alone couldn't stop the physical shock of exile.
+              </p>
+              <p>
+                I wrote <strong class="text-espresso font-medium italic">Ghost Dogmas</strong> as the somatic roadmap I needed: bridging modern neuroscience and body-based change work to help you finally feel at home in your own skin.&rdquo;
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-card-border flex items-center gap-8 text-xs text-muted-stone">
+              <div>
+                <span class="block font-serif text-2xl font-bold text-espresso">20+</span>
+                <span>Years in Ministry</span>
+              </div>
+              <div class="w-px h-8 bg-card-border"></div>
+              <div>
+                <span class="block font-serif text-2xl font-bold text-espresso">DRM-Free</span>
+                <span>PDF &amp; EPUB Formats</span>
+              </div>
+              <div class="w-px h-8 bg-card-border"></div>
+              <div>
+                <span class="block font-serif text-2xl font-bold text-espresso">Body-First</span>
+                <span>Somatic Framework</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alternative Pathway: Deeper Dive -->
+          <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-paper-subtle border border-card-border text-center max-w-2xl mx-auto reveal">
+            <span class="text-[11px] font-semibold uppercase tracking-widest text-terracotta block mb-1">
+              Need More Context?
+            </span>
+            <h4 class="font-serif font-semibold text-xl text-espresso mb-2">
+              Explore the Somatic Deconstruction Framework
+            </h4>
+            <p class="text-xs text-warm-stone leading-relaxed max-w-lg mx-auto mb-5">
+              Read our complete 10-minute executive synthesis unpacking the Penthouse vs. Basement dichotomy, the 11-million-bit prediction filter, and real-world somatic resets before deciding.
+            </p>
+            <a href="deep-dive.html" class="btn-outline-terracotta inline-flex items-center gap-2 text-xs">
+              <span>Not Convinced Yet? Read the Executive Summary</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: PAY-WHAT-YOU-WANT CHECKOUT MODULE ================= -->
+    <section id="pricing" class="py-20 md:py-28">
+      <div class="max-w-xl mx-auto px-6 sm:px-8">
+        
+        <div class="checkout-sanctuary-card reveal" id="checkoutWidget">
+          
+          <div class="text-center mb-8">
+            <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-2">Open Access</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-3">
+              Support the Work
+            </h2>
+            <p class="text-sm text-warm-stone font-light leading-relaxed max-w-md mx-auto">
+              We want to understand what this work is worth to our community. Enter whatever figure reflects your capacity today.
+            </p>
+          </div>
+
+          <!-- Pure Custom Amount Field -->
+          <div class="mb-6 p-4 rounded-xl bg-paper border border-card-border">
+            <label for="customAmount" class="block text-xs font-semibold uppercase tracking-wider text-muted-stone mb-2 text-center">
+              Enter Your Contribution Amount ($ USD)
+            </label>
+            <div class="relative max-w-xs mx-auto">
+              <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-espresso font-serif text-2xl font-bold">$</span>
+              <input 
+                type="number" 
+                id="customAmount" 
+                step="1" 
+                placeholder="0" 
+                class="w-full pl-10 pr-14 py-3 bg-white rounded-lg border border-card-border text-espresso font-serif text-2xl font-bold text-center focus:outline-none focus:border-terracotta"
+                aria-label="Custom contribution dollar amount"
+              />
+              <span class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-xs font-semibold text-muted-stone">USD</span>
+            </div>
+            <p class="text-[11px] text-muted-stone text-center mt-2">Choose any amount that feels right for you</p>
+          </div>
+
+          <!-- Formats Included Box -->
+          <div class="mb-6 p-4 rounded-xl bg-paper border border-card-border flex items-center justify-between gap-4 text-xs text-warm-stone">
+            <div class="flex items-center gap-3">
+              <img src="cover.jpg" alt="Ghost Dogmas Cover" class="w-10 h-14 object-cover rounded shadow-sm border border-card-border shrink-0" />
+              <div>
+                <span class="font-semibold text-espresso block text-sm">Ghost Dogmas Digital Edition</span>
+                <span class="text-muted-stone text-xs">Instant DRM-free PDF + EPUB bundle</span>
+              </div>
+            </div>
+            <span class="text-sage font-medium text-xs">Delivered to Email upon POP</span>
+          </div>
+
+          <!-- Live Total Summary -->
+          <div class="flex items-baseline justify-between py-4 border-t border-card-border mb-6">
+            <span class="text-sm font-medium text-warm-stone">Total Contribution:</span>
+            <span class="text-3xl font-serif font-bold text-espresso" id="totalDisplay">$0.00</span>
+          </div>
+
+          <!-- Checkout CTA Button -->
+          <button type="button" class="btn-terracotta w-full" id="checkoutBtn">
+            <span>Proceed to Secure Checkout</span>
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+
+          <!-- Alternative Not Convinced Yet Action -->
+          <div class="mt-3.5 pt-3.5 border-t border-card-border text-center">
+            <a href="deep-dive.html" class="btn-outline-terracotta w-full text-center block text-xs py-2.5">
+              <span>Not Convinced Yet? Read the Executive Summary First</span>
+            </a>
+          </div>
+
+          <p class="text-[11px] text-center text-muted-stone mt-3">
+            Secure Payment via PayPal, International Cards &amp; Capitec Bank (EFT)
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: MINIMAL FAQ ================= -->
+    <section id="faq" class="py-20 md:py-28 bg-white border-t border-card-border">
+      <div class="max-w-3xl mx-auto px-6 sm:px-8">
+        
+        <div class="text-center mb-16 reveal">
+          <span class="text-xs font-semibold uppercase tracking-widest text-terracotta block mb-2">Common Inquiries</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-3">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="divide-y divide-card-border" id="faqAccordion">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-clean-item reveal">
+            <button type="button" class="faq-clean-trigger" id="faq-trigger-1" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Is this an academic critique or theological deconstruction?</span>
+              <div class="faq-clean-icon">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-clean-content" id="faq-answer-1" role="region" aria-labelledby="faq-trigger-1">
+              <div class="pt-3 text-sm text-warm-stone leading-relaxed">
+                No. It is neither a theological debate nor an academic polemic. It is a practical, biological field guide focused on calming the creature neurology, resolving chronic subconscious guilt, and building genuine peace outside high-demand religious systems.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-clean-item reveal">
+            <button type="button" class="faq-clean-trigger" id="faq-trigger-2" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Why don't mindset tools and conscious affirmations solve religious panic?</span>
+              <div class="faq-clean-icon">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-clean-content" id="faq-answer-2" role="region" aria-labelledby="faq-trigger-2">
+              <div class="pt-3 text-sm text-warm-stone leading-relaxed">
+                Mindset tools operate in the cerebral cortex (the penthouse). Religious conditioning is hardwired into the autonomic survival neurology between ages 3 and 6 (the basement). <em>Ghost Dogmas</em> provides body-first exercises to soothe the survival wiring directly.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-clean-item reveal">
+            <button type="button" class="faq-clean-trigger" id="faq-trigger-3" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>What formats are included with my contribution?</span>
+              <div class="faq-clean-icon">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-clean-content" id="faq-answer-3" role="region" aria-labelledby="faq-trigger-3">
+              <div class="pt-3 text-sm text-warm-stone leading-relaxed">
+                You receive instant access to both a high-resolution, beautifully typeset DRM-free PDF and a clean EPUB edition formatted specifically for Apple Books, Kindle devices, and e-ink readers like reMarkable.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-clean-item reveal">
+            <button type="button" class="faq-clean-trigger" id="faq-trigger-4" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>How does the pay-what-you-want pricing model work?</span>
+              <div class="faq-clean-icon">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-clean-content" id="faq-answer-4" role="region" aria-labelledby="faq-trigger-4">
+              <div class="pt-3 text-sm text-warm-stone leading-relaxed">
+                You can name any amount you choose. We believe in accessible pricing that sustains independent research and publishing while giving each reader the autonomy to decide what feels aligned for their situation.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MINIMALIST FOOTER ================= -->
+  <footer class="py-14 bg-paper-subtle border-t border-card-border text-xs text-muted-stone">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div>
+        <p class="text-espresso font-medium">&copy; 2026 Mario Botha. All Rights Reserved.</p>
+        <p class="text-muted-stone mt-0.5"><em>Ghost Dogmas: Re-wiring the Subconscious Theology of Your Nervous System</em></p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#privacy" class="hover:text-terracotta transition-colors legal-link" data-type="privacy">Privacy Policy</a>
+        <span class="text-card-border">&bull;</span>
+        <a href="#terms" class="hover:text-terracotta transition-colors legal-link" data-type="terms">Terms of Service</a>
+        <span class="text-card-border">&bull;</span>
+        <a href="mailto:support@mariobotha.com" class="hover:text-terracotta transition-colors">Contact Support</a>
+      </div>
+
+      <div>
+        <a href="#hero" class="inline-flex items-center gap-1.5 text-espresso hover:text-terracotta transition-colors font-medium">
+          <span>Return to Top</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- Video Lightbox Modal (Warm Sanctuary) -->
+  <div id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" class="modal-overlay hidden fixed inset-0 z-50 bg-espresso/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-card-editorial max-w-2xl w-full rounded-2xl overflow-hidden relative">
+      <div class="p-4 border-b border-card-border flex items-center justify-between bg-paper">
+        <h4 class="font-serif font-semibold text-espresso text-base flex items-center gap-2" id="videoModalTitle">
+          <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+          A Personal Message from Mario Botha
+        </h4>
+        <button type="button" class="close-modal text-muted-stone hover:text-espresso p-1" aria-label="Close video player">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="p-6 bg-white">
+        <!-- Responsive Video Embed Container -->
+        <div class="aspect-video w-full rounded-xl bg-espresso overflow-hidden relative shadow-md">
+          <iframe 
+            id="videoPlayerFrame" 
+            class="w-full h-full" 
+            src="" 
+            data-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1" 
+            title="Mario Botha - Introduction to Ghost Dogmas" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="mt-4 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-3">
+          <div>
+            <h5 class="text-espresso font-serif font-semibold text-base">Why the Body Holds Onto the Pulpit</h5>
+            <p class="text-xs text-muted-stone">A 90-second perspective on nervous system survival theology.</p>
+          </div>
+          <a href="#pricing" class="btn-terracotta-sm close-modal shrink-0">Claim Your Copy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout & Instant Download Modal -->
+  <div id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle" class="modal-overlay hidden fixed inset-0 z-50 bg-espresso/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-card-editorial max-w-md w-full rounded-2xl overflow-hidden relative">
+      <div class="p-4 border-b border-card-border flex items-center justify-between bg-paper">
+        <h4 class="font-serif font-semibold text-espresso text-base flex items-center gap-2" id="checkoutModalTitle">
+          <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+          Complete Your Contribution
+        </h4>
+        <button type="button" class="close-modal text-muted-stone hover:text-espresso p-1" aria-label="Close checkout">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Checkout Form Step with Dual Payment Methods -->
+      <div class="p-6 bg-white" id="checkoutFormStep">
+        
+        <!-- Summary Box -->
+        <div class="mb-5 p-3.5 rounded-xl bg-paper border border-card-border text-xs flex items-center gap-3">
+          <img src="cover.jpg" alt="Ghost Dogmas Cover" class="w-10 h-14 object-cover rounded shadow-sm border border-card-border shrink-0" />
+          <div class="flex-1">
+            <div class="flex justify-between text-muted-stone mb-1">
+              <span>Item:</span>
+              <span class="text-espresso font-medium">Ghost Dogmas (PDF + EPUB)</span>
+            </div>
+            <div class="flex justify-between items-baseline text-sm font-bold text-espresso pt-2 border-t border-card-border mt-1">
+              <span>Total Contribution:</span>
+              <div class="text-right">
+                <span class="text-terracotta font-serif text-base" id="modalTotalDisplay">$0.00 USD</span>
+                <span class="block text-[10px] font-normal text-muted-stone" id="modalZarDisplay">&approx; R0 ZAR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Required Delivery Email Address -->
+        <div class="mb-4">
+          <label for="deliveryEmail" class="block text-[11px] font-semibold uppercase tracking-wider text-muted-stone mb-1.5">
+            Delivery Email Address <span class="text-terracotta">*</span> (For your digital book delivery &amp; receipt)
+          </label>
+          <input 
+            type="email" 
+            id="deliveryEmail" 
+            required 
+            placeholder="name@example.com" 
+            class="w-full px-3.5 py-2.5 bg-paper rounded-xl border border-card-border text-espresso text-sm focus:outline-none focus:border-terracotta"
+          />
+        </div>
+
+        <!-- Payment Method Tabs -->
+        <div class="flex gap-2 mb-5">
+          <button type="button" class="payment-tab-btn active" id="tabBtnPaypal">
+            <svg class="w-4 h-4 text-[#0079C1]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.282-.647 4.148-3.05 6.425-6.697 6.425H9.76a.91.91 0 0 0-.898.77l-1.077 6.84a.641.641 0 0 1-.709.61z"/>
+            </svg>
+            <span>PayPal / Card</span>
+          </button>
+          
+          <button type="button" class="payment-tab-btn" id="tabBtnEft">
+            <svg class="w-4 h-4 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+            <span>SA Bank (EFT)</span>
+          </button>
+        </div>
+
+        <!-- PANEL 1: PAYPAL / INTERNATIONAL -->
+        <div id="panelPaypal" class="space-y-4">
+          <div class="p-3.5 rounded-xl bg-paper-subtle border border-card-border text-xs leading-relaxed">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-semibold text-espresso">International &amp; Card Contributions</span>
+              <span class="text-terracotta font-bold text-xs" id="paypalZarDisplay">&approx; R0 ZAR</span>
+            </div>
+            <p class="text-[11px] text-muted-stone mb-2.5">
+              Pay with any credit card, debit card, or your PayPal balance.
+            </p>
+
+            <div class="space-y-1.5 text-warm-stone font-mono text-[11px] bg-white p-3 rounded-lg border border-card-border">
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">PayPal Handle:</span>
+                <strong class="text-espresso select-all">paypal.me/mariobotha</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Account Holder:</span>
+                <strong class="text-espresso">Mario Botha</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Reference / Note:</span>
+                <strong class="text-terracotta" id="paypalRefDisplay">GD-YourName</strong>
+              </div>
+            </div>
+
+            <a 
+              href="https://www.paypal.me/mariobotha" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              id="paypalLinkBtn" 
+              class="mt-2.5 btn-terracotta w-full flex items-center justify-center gap-2 py-3"
+            >
+              <span>Pay on PayPal (<span id="paypalBtnAmount">$0.00</span>)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Step 2: Send POP for PayPal -->
+          <div class="p-3.5 bg-paper rounded-xl border border-card-border">
+            <h5 class="text-xs font-semibold text-espresso mb-1 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+              <span>Step 2: Forward Your PayPal Proof of Payment (POP)</span>
+            </h5>
+            <p class="text-[11px] text-muted-stone mb-3 leading-relaxed">
+              Once your PayPal payment completes, forward your receipt screenshot or transaction confirmation via WhatsApp or Email. Mario will personally email the complete PDF &amp; EPUB package directly to your inbox:
+            </p>
+            
+            <div class="space-y-2">
+              <a 
+                href="https://wa.me/27730743988?text=Hi%20Mario,%20here%20is%20my%20PayPal%20Proof%20of%20Payment%20for%20Ghost%20Dogmas" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
+              >
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Send PayPal POP via WhatsApp (073 074 3988)</span>
+              </a>
+
+              <a 
+                href="mailto:3812629@myuwc.ac.za?subject=Ghost%20Dogmas%20PayPal%20Proof%20of%20Payment&body=Hi%20Mario,%0A%0AAttached%20is%20my%20PayPal%20proof%20of%20payment%20for%20Ghost%20Dogmas.%0A%0APlease%20email%20my%20ebook%20to%20this%20address.%0A%0AThank%20you!" 
+                class="w-full py-2.5 px-4 rounded-xl border border-card-border hover:border-terracotta text-xs font-semibold text-espresso flex items-center justify-center gap-2 transition-colors bg-white"
+              >
+                <svg class="w-4 h-4 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span>Email POP to 3812629@myuwc.ac.za</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 2: SOUTH AFRICAN EFT -->
+        <div id="panelEft" class="space-y-4 hidden">
+          <div class="p-3.5 rounded-xl bg-paper-subtle border border-card-border text-xs leading-relaxed">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-semibold text-espresso">South African Banking Details (EFT)</span>
+              <span class="text-terracotta font-bold text-xs" id="eftZarTotal">R0 ZAR</span>
+            </div>
+            <p class="text-[11px] text-muted-stone mb-2.5">
+              <strong class="text-espresso">South African Bank Accounts Only:</strong> For Capitec Pay, FNB, Standard Bank, Nedbank, Absa, etc. (International supporters must use the PayPal tab).
+            </p>
+            
+            <div class="space-y-1.5 text-warm-stone font-mono text-[11px] bg-white p-3 rounded-lg border border-card-border" id="bankDetailsText">
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Account Holder:</span>
+                <strong class="text-espresso">M Botha</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Bank Name:</span>
+                <strong class="text-espresso">Capitec Bank</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Account Number:</span>
+                <strong class="text-espresso tracking-wider select-all">1393726257</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Branch Code:</span>
+                <strong class="text-espresso">470010 (Universal)</strong>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Account Type:</span>
+                <span class="text-espresso font-sans">Savings / Current</span>
+              </div>
+              <div class="bank-detail-row">
+                <span class="text-muted-stone font-sans">Reference:</span>
+                <strong class="text-terracotta" id="eftRefDisplay">GD-YourName</strong>
+              </div>
+            </div>
+
+            <button type="button" id="copyBankBtn" class="mt-2.5 w-full py-1.5 px-3 rounded-lg border border-card-border hover:border-terracotta text-[11px] text-espresso font-medium flex items-center justify-center gap-1.5 transition-colors bg-white">
+              <svg class="w-3.5 h-3.5 text-muted-stone" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span id="copyBankText">Copy Banking Details</span>
+            </button>
+          </div>
+
+          <!-- EFT Verification Submission Step -->
+          <div class="p-3.5 bg-paper rounded-xl border border-card-border" id="eftSubmitWrap">
+            <h5 class="text-xs font-semibold text-espresso mb-1 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+              <span>Step 2: Send Your Proof of Payment (POP)</span>
+            </h5>
+            <p class="text-[11px] text-muted-stone mb-3 leading-relaxed">
+              Once you process the EFT in your banking app, send your Proof of Payment slip via WhatsApp or email. Mario will personally email the complete PDF &amp; EPUB package directly to your inbox:
+            </p>
+            
+            <div class="space-y-2">
+              <a 
+                href="https://wa.me/27730743988?text=Hi%20Mario,%20here%20is%20my%20Proof%20of%20Payment%20for%20Ghost%20Dogmas" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
+              >
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Send EFT POP via WhatsApp (073 074 3988)</span>
+              </a>
+
+              <a 
+                href="mailto:3812629@myuwc.ac.za?subject=Ghost%20Dogmas%20Proof%20of%20Payment&body=Hi%20Mario,%0A%0AAttached%20is%20my%20proof%20of%20payment%20for%20Ghost%20Dogmas.%0A%0APlease%20email%20my%20copy%20to%20this%20address.%0A%0AThank%20you!" 
+                class="w-full py-2.5 px-4 rounded-xl border border-card-border hover:border-terracotta text-xs font-semibold text-espresso flex items-center justify-center gap-2 transition-colors bg-white"
+              >
+                <svg class="w-4 h-4 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span>Email POP to 3812629@myuwc.ac.za</span>
+              </a>
+            </div>
+          </div>
+
+          <p class="text-[10px] text-muted-stone text-center">
+            Questions? Contact Mario directly on WhatsApp: <strong>073 074 3988</strong> or <a href="mailto:3812629@myuwc.ac.za" class="underline text-espresso">3812629@myuwc.ac.za</a>
+          </p>
+        </div>
+
+        <p class="text-[10px] text-muted-stone text-center mt-4">
+          256-Bit SSL Encrypted &bull; 30-Day Quiet Satisfaction Guarantee
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Legal Notice Modal -->
+  <div id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" class="modal-overlay hidden fixed inset-0 z-50 bg-espresso/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-card-editorial max-w-lg w-full rounded-2xl overflow-hidden p-6 bg-white relative">
+      <div class="flex items-center justify-between pb-3 border-b border-card-border mb-4">
+        <h4 class="font-serif font-semibold text-espresso text-base" id="legalModalTitle">Terms &amp; Privacy</h4>
+        <button type="button" class="close-modal text-muted-stone hover:text-espresso p-1" aria-label="Close dialog">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="text-xs text-warm-stone space-y-3 leading-relaxed" id="legalModalBody">
+        <p><strong>Commitment to Privacy:</strong> Your email and contact details are stored securely solely for the fulfillment of your digital purchase and related author updates. We never sell or share personal data.</p>
+        <p><strong>Educational Purpose:</strong> <em>Ghost Dogmas</em> provides educational somatic nervous system regulation frameworks. It is not clinical psychotherapy or psychiatric treatment.</p>
+        <p><strong>30-Day Guarantee:</strong> If this field guide does not bring ease to your nervous system, write to support@mariobotha.com for a full, no-questions-asked refund.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-card-border text-right">
+        <button type="button" class="close-modal btn-terracotta-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

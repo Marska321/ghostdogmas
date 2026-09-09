@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @page {
+    size: 6in 9in;
+    margin: 0.8in;
+  }
+  @page front {
+    margin: 0.8in;
+    @bottom-center { content: none; }
+  }
+  @page main {
+    margin: 0.8in;
+    @bottom-center {
+      content: counter(page);
+      font-family: Georgia, serif;
+      font-size: 9pt;
+    }
+  }
+  .front {
+    page: front;
+    break-after: page;
+  }
+  .main {
+    page: main;
+    counter-reset: page 1;
+    break-after: page;
+  }
+</style>
+</head>
+<body>
+<div class='front'><h1>Title Page</h1></div>
+<div class='front'><h1>Table of Contents</h1></div>
+<div class='main'><h1>Chapter 1</h1><p>Body text</p></div>
+<div class='main'><h1>Chapter 2</h1><p>Body text 2</p></div>
+</body>
+</html>
