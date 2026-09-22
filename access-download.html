@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Digital Field Guide | Ghost Dogmas by Mario Botha</title>
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- Tailwind CSS & Editorial Google Fonts -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#FAF9F6',
+            'paper-subtle': '#F4F1EA',
+            'card-border': '#E5E0D8',
+            'espresso': '#1C1917',
+            'warm-stone': '#57534E',
+            'muted-stone': '#78716C',
+            'terracotta': '#C06E52',
+            'terracotta-dark': '#A85B42',
+            'terracotta-light': '#FBF4F0',
+            'terracotta-border': '#E8D5CE',
+            'sage': '#768A7E',
+            'sage-light': '#F2F5F3',
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-paper text-espresso antialiased min-h-screen flex flex-col justify-between selection:bg-terracotta/20 selection:text-espresso">
+
+  <!-- Header -->
+  <header class="py-6 px-6 sm:px-8 border-b border-card-border/70 bg-white/80 backdrop-blur-md">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-full bg-terracotta-light border border-terracotta/30 flex items-center justify-center text-terracotta">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v8M4.93 10.93 6.34 12.34M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M8 22l4-10 4 10"/>
+          </svg>
+        </div>
+        <span class="font-serif tracking-wider text-base font-semibold text-espresso">Ghost Dogmas</span>
+      </a>
+      <div id="sessionStatusBadge">
+        <span class="text-xs font-semibold tracking-wider text-sage bg-sage-light px-3 py-1 rounded-full border border-sage/30">
+          &bull; Verified Single-Use Session
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-2xl mx-auto px-6 py-12 sm:py-16 w-full">
+
+    <!-- STATE 1: UNAUTHORIZED / NO TOKEN -->
+    <div id="unauthorizedState" class="hidden text-center bg-white rounded-2xl border border-card-border p-8 sm:p-10 shadow-card">
+      <div class="w-14 h-14 rounded-full bg-terracotta-light text-terracotta border border-terracotta-border flex items-center justify-center mx-auto mb-4">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-serif font-semibold text-espresso mb-3">
+        Authorized Access Required
+      </h1>
+      <p class="text-sm text-warm-stone max-w-md mx-auto leading-relaxed mb-6">
+        Direct download access without a valid, single-use purchase token is restricted. If you have made payment via PayPal or EFT, please send your Proof of Payment to receive your unique access link.
+      </p>
+
+      <div class="space-y-3 max-w-sm mx-auto">
+        <a 
+          href="https://wa.me/27730743988?text=Hi%20Mario,%20I%20need%20my%20Ghost%20Dogmas%20download%20access%20link." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
+        >
+          <span>Send POP / Request Link via WhatsApp (073 074 3988)</span>
+        </a>
+        <a 
+          href="mailto:3812629@myuwc.ac.za?subject=Ghost%20Dogmas%20Access%20Request" 
+          class="w-full py-3 px-4 rounded-xl border border-card-border hover:border-terracotta text-xs font-semibold text-espresso flex items-center justify-center gap-2 transition-colors bg-paper"
+        >
+          <span>Email Support (3812629@myuwc.ac.za)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- STATE 2: EXPIRED / LIMIT REACHED -->
+    <div id="expiredState" class="hidden text-center bg-white rounded-2xl border border-card-border p-8 sm:p-10 shadow-card">
+      <div class="w-14 h-14 rounded-full bg-warm-stone/10 text-warm-stone border border-card-border flex items-center justify-center mx-auto mb-4">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-serif font-semibold text-espresso mb-3">
+        Download Quota Reached
+      </h1>
+      <p class="text-sm text-warm-stone max-w-md mx-auto leading-relaxed mb-6">
+        This single-use access link has reached its maximum download limit (2/2) and is now closed for security. If your download was interrupted or you need a replacement file, contact Mario directly.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+        <a 
+          href="https://wa.me/27730743988?text=Hi%20Mario,%20my%20Ghost%20Dogmas%20download%20limit%20expired%20and%20I%20need%20a%20reset." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="py-2.5 px-4 rounded-xl bg-[#25D366] text-white text-xs font-semibold flex items-center justify-center gap-2"
+        >
+          <span>WhatsApp Mario (073 074 3988)</span>
+        </a>
+        <a 
+          href="mailto:3812629@myuwc.ac.za?subject=Ghost%20Dogmas%20Download%20Reset" 
+          class="py-2.5 px-4 rounded-xl border border-card-border text-xs font-semibold text-espresso flex items-center justify-center gap-2"
+        >
+          <span>Email 3812629@myuwc.ac.za</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- STATE 3: AUTHORIZED DOWNLOAD CENTER -->
+    <div id="authorizedState" class="hidden">
+      
+      <div class="text-center mb-8">
+        <div class="w-14 h-14 rounded-full bg-sage-light text-sage border border-sage/30 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-serif font-semibold text-espresso mb-2">
+          Thank You for Your Support
+        </h1>
+        <p class="text-sm text-warm-stone max-w-md mx-auto leading-relaxed">
+          <span id="personalizedGreeting">Your contribution has been verified.</span> Your DRM-free copies of <em class="text-espresso font-medium">Ghost Dogmas</em> are unlocked below.
+        </p>
+      </div>
+
+      <!-- Security Notice & Quota Tracker -->
+      <div class="mb-6 p-4 rounded-xl bg-paper-subtle border border-card-border flex items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-sage"></span>
+          <span class="text-warm-stone font-medium">Personal Single-Use Link</span>
+        </div>
+        <span id="quotaDisplay" class="font-semibold text-espresso bg-white px-2.5 py-1 rounded-md border border-card-border">
+          Downloads Remaining: 2 of 2
+        </span>
+      </div>
+
+      <!-- Product Card & Downloads -->
+      <div class="bg-white rounded-2xl border border-card-border p-6 sm:p-8 shadow-card mb-8">
+        <div class="flex items-center gap-4 pb-6 border-b border-card-border">
+          <img src="cover.jpg" alt="Ghost Dogmas Book Cover" class="w-16 h-22 object-cover rounded-md shadow-sm border border-card-border shrink-0" />
+          <div>
+            <h2 class="font-serif text-lg font-semibold text-espresso">
+              Ghost Dogmas: Re-wiring the Subconscious Theology of Your Nervous System
+            </h2>
+            <p class="text-xs text-muted-stone mt-1">By Mario Botha &bull; Digital Publication Package</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-[11px] bg-paper px-2 py-0.5 rounded border border-card-border text-warm-stone font-medium">DRM-Free</span>
+              <span class="text-[11px] bg-paper px-2 py-0.5 rounded border border-card-border text-warm-stone font-medium">PDF + EPUB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Action Buttons -->
+        <div class="mt-6 space-y-3">
+          <a 
+            id="pdfDownloadBtn"
+            href="downloads/Ghost_Dogmas_Field_Guide.pdf" 
+            download="Ghost_Dogmas_Field_Guide.pdf" 
+            class="btn-terracotta w-full flex items-center justify-center gap-3 py-3.5 dl-action-btn"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span class="font-semibold">Download High-Resolution PDF (32 MB)</span>
+          </a>
+
+          <a 
+            id="epubDownloadBtn"
+            href="downloads/Ghost_Dogmas_Reader.epub" 
+            download="Ghost_Dogmas_Reader.epub" 
+            class="w-full py-3.5 px-4 rounded-full border border-card-border hover:border-terracotta text-sm text-espresso font-semibold flex items-center justify-center gap-3 transition-colors bg-paper dl-action-btn"
+          >
+            <svg class="w-5 h-5 text-muted-stone" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <span>Download EPUB for Apple Books &amp; Kindle (18 MB)</span>
+          </a>
+        </div>
+
+        <!-- Reader Device Tips -->
+        <div class="mt-8 pt-6 border-t border-card-border">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-espresso mb-3">
+            How to Load Your Files:
+          </h3>
+          <ul class="text-xs text-warm-stone space-y-2 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta font-bold">&bull;</span>
+              <span><strong>Apple Devices (iPhone / iPad / Mac):</strong> Tap the EPUB link above and select "Open in Apple Books".</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta font-bold">&bull;</span>
+              <span><strong>Amazon Kindle:</strong> Use Amazon's official "Send to Kindle" web tool or email the EPUB directly to your Kindle address.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-terracotta font-bold">&bull;</span>
+              <span><strong>reMarkable &amp; Tablets:</strong> Drag and drop the PDF into your desktop reMarkable app for handwritten annotation.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Need Support -->
+      <div class="text-center text-xs text-muted-stone space-y-1">
+        <p>Need assistance or have questions about somatic exercises?</p>
+        <p>WhatsApp Mario at <strong>073 074 3988</strong> or email <a href="mailto:3812629@myuwc.ac.za" class="text-terracotta underline font-medium">3812629@myuwc.ac.za</a></p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 border-t border-card-border/70 text-center text-xs text-muted-stone bg-paper-subtle">
+    &copy; 2026 Mario Botha. All Rights Reserved. Ghost Dogmas.
+  </footer>
+
+  <!-- Script for Single-Use Token and Download Quota Management -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get('token');
+      const user = urlParams.get('user');
+      const MAX_DOWNLOADS = 2;
+
+      const unauthorizedState = document.getElementById('unauthorizedState');
+      const expiredState = document.getElementById('expiredState');
+      const authorizedState = document.getElementById('authorizedState');
+      const quotaDisplay = document.getElementById('quotaDisplay');
+      const personalizedGreeting = document.getElementById('personalizedGreeting');
+      const sessionStatusBadge = document.getElementById('sessionStatusBadge');
+
+      // 1. If NO token provided, show unauthorized screen
+      if (!token) {
+        unauthorizedState.classList.remove('hidden');
+        sessionStatusBadge.innerHTML = `<span class="text-xs font-semibold tracking-wider text-terracotta bg-terracotta-light px-3 py-1 rounded-full border border-terracotta-border">&bull; Access Key Required</span>`;
+        return;
+      }
+
+      // 2. Check token download quota
+      const storageKey = 'gd_quota_' + token;
+      let usedDownloads = parseInt(localStorage.getItem(storageKey) || '0', 10);
+
+      if (usedDownloads >= MAX_DOWNLOADS) {
+        expiredState.classList.remove('hidden');
+        sessionStatusBadge.innerHTML = `<span class="text-xs font-semibold tracking-wider text-muted-stone bg-paper-subtle px-3 py-1 rounded-full border border-card-border">&bull; Session Expired</span>`;
+        return;
+      }
+
+      // 3. Render Authorized State
+      authorizedState.classList.remove('hidden');
+      if (user && personalizedGreeting) {
+        personalizedGreeting.textContent = `Welcome, ${decodeURIComponent(user)}. Your contribution has been verified.`;
+      }
+
+      function updateQuotaUI() {
+        const remaining = Math.max(0, MAX_DOWNLOADS - usedDownloads);
+        if (quotaDisplay) {
+          quotaDisplay.textContent = `Downloads Remaining: ${remaining} of ${MAX_DOWNLOADS}`;
+        }
+        if (remaining === 0) {
+          document.querySelectorAll('.dl-action-btn').forEach(btn => {
+            btn.classList.add('opacity-50', 'pointer-events-none');
+            btn.innerHTML = `<span>Download Limit Reached (${MAX_DOWNLOADS}/${MAX_DOWNLOADS})</span>`;
+          });
+        }
+      }
+
+      updateQuotaUI();
+
+      // Track clicks on download buttons
+      document.querySelectorAll('.dl-action-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          usedDownloads += 1;
+          localStorage.setItem(storageKey, String(usedDownloads));
+          updateQuotaUI();
+
+          if (usedDownloads >= MAX_DOWNLOADS) {
+            setTimeout(() => {
+              authorizedState.classList.add('hidden');
+              expiredState.classList.remove('hidden');
+            }, 3000);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

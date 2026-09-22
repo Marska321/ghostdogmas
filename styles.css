@@ -1,0 +1,827 @@
+/* ==========================================================================
+   GHOST DOGMAS - THE QUIET SANCTUARY
+   Editorial, Human-Centered, Light-Filled Publishing Aesthetic
+   Inspiration: High-End Psychological & Neuroscience Literature
+   ========================================================================== */
+
+:root {
+  /* Canvas & Surfaces: Warm Paper & Pure White */
+  --bg-paper: #FAF9F6;
+  --bg-paper-subtle: #F4F1EA;
+  --bg-white: #FFFFFF;
+  --border-card: #E5E0D8;
+  --border-light: #ECE8E1;
+
+  /* Typography: Deep Espresso Charcoal (Never pure #000) & Warm Stone */
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --text-muted: #78716C;
+  --text-light: #A8A29E;
+
+  /* Accents: Warm Terracotta Clay & Soft Moss / Sage */
+  --terracotta: #C06E52;
+  --terracotta-dark: #A85B42;
+  --terracotta-light: #FBF4F0;
+  --terracotta-border: #E8BFB2;
+
+  --sage: #768A7E;
+  --sage-dark: #58695F;
+  --sage-light: #F2F5F3;
+  --sage-border: #C8D4CD;
+
+  /* Typography Stacks */
+  --font-serif: 'Newsreader', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Emil Kowalski Animation Easing Tokens */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(28, 25, 23, 0.04);
+  --shadow-card: 0 8px 30px rgba(28, 25, 23, 0.06);
+  --shadow-hover: 0 14px 40px rgba(28, 25, 23, 0.09);
+}
+
+/* Base & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility Typography */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Natural Light Background Gradients */
+.sunlight-ambient {
+  position: absolute;
+  top: -120px;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(244, 235, 222, 0.8) 0%, rgba(250, 249, 246, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sunlight-ambient-warm {
+  position: absolute;
+  top: 45%;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(251, 244, 240, 0.7) 0%, rgba(250, 249, 246, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Buttons - Emil Kowalski Recipe (160ms scale press feedback & exact properties) */
+.btn-terracotta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2rem;
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  border: 1px solid var(--terracotta-dark);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(192, 110, 82, 0.25);
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-terracotta:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-terracotta:hover {
+    background-color: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192, 110, 82, 0.35);
+  }
+}
+
+.btn-terracotta-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.825rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(192, 110, 82, 0.2);
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+  user-select: none;
+}
+
+.btn-terracotta-sm:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-terracotta-sm:hover {
+    background-color: var(--terracotta-dark);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline-terracotta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.15rem;
+  background-color: transparent;
+  color: var(--terracotta);
+  border: 1.5px solid var(--terracotta-border);
+  border-radius: 9999px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+  user-select: none;
+}
+
+.btn-outline-terracotta:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline-terracotta:hover {
+    background-color: var(--terracotta-light);
+    border-color: var(--terracotta);
+  }
+}
+
+/* ==========================================================================
+   REALISTIC 3D EBOOK COVER (ACTUAL BOOK COVER INTEGRATION)
+   ========================================================================== */
+.book-3d-scene {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.book-3d-container {
+  position: relative;
+  width: 268px;
+  height: 380px;
+  transform-style: preserve-3d;
+  transform: rotateY(-16deg) rotateX(5deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-3d-scene:hover .book-3d-container {
+  transform: rotateY(-6deg) rotateX(2deg) translateY(-8px) scale(1.02);
+}
+
+.book-3d-front {
+  position: absolute;
+  inset: 0;
+  border-radius: 3px 10px 10px 3px;
+  overflow: hidden;
+  box-shadow: 
+    -4px 4px 14px rgba(28, 25, 23, 0.12),
+    16px 22px 38px rgba(28, 25, 23, 0.22),
+    inset 3px 0 6px rgba(0, 0, 0, 0.25);
+  background-color: #12100E;
+  z-index: 5;
+}
+
+.book-3d-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Subtle realistic page sheen overlay on cover */
+.book-3d-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    108deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.08) 14%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+/* Spine 3D element */
+.book-3d-spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 100%;
+  background: linear-gradient(90deg, #12100E 0%, #26211C 50%, #12100E 100%);
+  transform: rotateY(-90deg) translateZ(0);
+  transform-origin: left;
+  border-radius: 3px 0 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-3d-spine span {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  color: #E5C378;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 3D Pages edge */
+.book-3d-pages {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 23px;
+  height: calc(100% - 6px);
+  background: repeating-linear-gradient(
+    to bottom,
+    #FAF6ED 0px,
+    #FAF6ED 2px,
+    #E8DFCE 3px
+  );
+  transform: rotateY(90deg) translateZ(-264px);
+  transform-origin: right;
+  border-radius: 0 4px 4px 0;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Soft contact shadow */
+.book-3d-shadow {
+  position: absolute;
+  width: 250px;
+  height: 25px;
+  bottom: -30px;
+  left: 10px;
+  background: radial-gradient(ellipse at center, rgba(28, 25, 23, 0.35) 0%, rgba(28, 25, 23, 0) 70%);
+  filter: blur(8px);
+  transform: rotateX(82deg) rotateY(-8deg);
+  pointer-events: none;
+}
+
+/* Mobile Safari & Small Screens (< 768px) 2D Fallback */
+@media (max-width: 767px) {
+  .book-3d-scene {
+    perspective: none !important;
+    padding: 0.5rem 0 1.5rem 0;
+  }
+  .book-3d-container {
+    width: 230px !important;
+    height: 326px !important;
+    transform: none !important;
+    box-shadow: 0 18px 40px rgba(28, 25, 23, 0.18);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .book-3d-spine,
+  .book-3d-pages,
+  .book-3d-shadow {
+    display: none !important;
+  }
+  .book-3d-front {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+}
+
+/* Standalone Border Tokens (Build-Time Resilience) */
+.border-terracotta-border {
+  border-color: #E8D5CE !important;
+}
+.border-terracotta-border\/70 {
+  border-color: rgba(232, 213, 206, 0.7) !important;
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-menu {
+  display: none;
+}
+.mobile-nav-menu.open {
+  display: flex;
+  animation: modalFadeIn 200ms var(--ease-out);
+}
+
+.book-author-top {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.book-title-block {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.book-main-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.book-sub-title {
+  font-family: var(--font-sans);
+  font-size: 0.725rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+/* Editorial Sunbeam Illustration */
+.book-illustration-box {
+  margin: 1.25rem auto;
+  width: 140px;
+  height: 120px;
+  background: #F5F1E8;
+  border: 1px solid #E2DDD4;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunbeam-graphic {
+  width: 100%;
+  height: 100%;
+}
+
+.book-footer-tag {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 600;
+  text-align: center;
+  border-top: 1px solid #ECE7DE;
+  padding-top: 0.75rem;
+}
+
+/* ==========================================================================
+   VIDEO EMBED FACADE (WARM NATURAL LIGHT)
+   ========================================================================== */
+.video-facade-quiet {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-facade-quiet:hover {
+  border-color: var(--terracotta-border);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.video-thumb-inner {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #F5EFEB 0%, #ECE3DC 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(28, 25, 23, 0.12);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s;
+}
+
+.video-facade-quiet:hover .video-play-button {
+  transform: scale(1.1);
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SECTION 1: 3-COLUMN MINIMAL GRID
+   ========================================================================== */
+.sanctuary-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sanctuary-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--terracotta-border);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-number {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--terracotta);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Quote Break */
+.editorial-quote-break {
+  border-top: 1px solid var(--border-card);
+  border-bottom: 1px solid var(--border-card);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  background-color: #FAF8F5;
+}
+
+.editorial-quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  font-style: italic;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .editorial-quote-text {
+    font-size: 2.15rem;
+  }
+}
+
+/* ==========================================================================
+   SECTION 2: FIELD GUIDE 2-COLUMN CHECKLIST
+   ========================================================================== */
+.fieldguide-item {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  transition: all 0.25s ease;
+}
+
+.fieldguide-item:hover {
+  border-color: #D6CEC3;
+  box-shadow: var(--shadow-card);
+}
+
+.fieldguide-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--terracotta);
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   SECTION 3: AUTHOR BIOGRAPHY
+   ========================================================================== */
+.author-frame {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.author-image-editorial {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-card);
+}
+
+/* ==========================================================================
+   SECTION 4: CHECKOUT MODULE (MINIMALIST WHITE CARD)
+   ========================================================================== */
+.checkout-sanctuary-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 25px rgba(28, 25, 23, 0.04);
+}
+
+@media (min-width: 640px) {
+  .checkout-sanctuary-card {
+    padding: 3.5rem;
+  }
+}
+
+.price-pill-editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 0.5rem;
+  border-radius: 0.875rem;
+  background-color: #FAF9F6;
+  border: 1.5px solid var(--border-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+  position: relative;
+  user-select: none;
+}
+
+.price-pill-editorial:active {
+  transform: scale(0.96);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .price-pill-editorial:hover {
+    border-color: var(--terracotta);
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+}
+
+.price-pill-editorial.active {
+  background-color: var(--terracotta-light);
+  border-color: var(--terracotta);
+  box-shadow: 0 2px 12px rgba(192, 110, 82, 0.15);
+}
+
+.price-pill-editorial.active .pill-amount {
+  color: var(--terracotta-dark);
+}
+
+.suggested-badge-clean {
+  position: absolute;
+  top: -10px;
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+  font-size: 0.575rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1px 8px;
+  border-radius: 9999px;
+}
+
+.custom-checkbox-clean {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--border-card);
+  border-radius: 5px;
+  background-color: #FAF9F6;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox-clean:checked {
+  background-color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.custom-checkbox-clean:checked::before {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+/* Payment Method Selector Tabs */
+.payment-tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-paper);
+  border: 1.5px solid var(--border-card);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+  width: 50%;
+  user-select: none;
+}
+
+.payment-tab-btn:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .payment-tab-btn:hover {
+    border-color: var(--terracotta-border);
+    color: var(--text-primary);
+  }
+}
+
+.payment-tab-btn.active {
+  background-color: #FFFFFF;
+  border-color: var(--terracotta);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.bank-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed var(--border-card);
+  font-size: 0.8rem;
+}
+
+.bank-detail-row:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   SECTION 5: ACCORDION & FOOTER
+   ========================================================================== */
+.faq-clean-item {
+  border-bottom: 1px solid var(--border-card);
+  padding: 1.5rem 0;
+}
+
+.faq-clean-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0;
+  transition: color 160ms var(--ease-out);
+}
+
+.faq-clean-trigger:hover {
+  color: var(--terracotta);
+}
+
+.faq-clean-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: border-color 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.faq-clean-icon svg {
+  transition: transform 220ms var(--ease-out);
+}
+
+.faq-clean-item.open .faq-clean-icon {
+  border-color: var(--terracotta);
+  color: var(--terracotta);
+}
+
+.faq-clean-item.open .faq-clean-icon svg {
+  transform: rotate(180deg);
+}
+
+.faq-clean-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 220ms var(--ease-out), opacity 200ms var(--ease-out);
+  opacity: 0;
+}
+
+.faq-clean-content > div {
+  overflow: hidden;
+}
+
+.faq-clean-item.open .faq-clean-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Modals - Emil Kowalski Recipe (250ms scale-up from 0.96 with ease-out) */
+.modal-overlay {
+  animation: modalFadeIn 250ms var(--ease-out);
+}
+
+.modal-card-editorial {
+  transform-origin: center;
+  animation: modalScaleUp 250ms var(--ease-out);
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 20px 60px rgba(28, 25, 23, 0.15);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Subtle Scroll Animations - Emil Kowalski Recipe (8px, 300ms ease-out) */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
