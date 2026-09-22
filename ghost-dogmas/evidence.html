@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Evidence Feed | Ghost Dogmas Research Bank</title>
+  <meta name="description" content="Peer-reviewed neuroscience, evolutionary biology, and somatic data proving why the body retains inherited dogma—and how to rewire it.">
+  
+  <!-- Open Graph Meta Tags for Social Previews -->
+  <meta property="og:title" content="The Evidence Feed | Ghost Dogmas Research Bank">
+  <meta property="og:description" content="Peer-reviewed neuroscience, evolutionary biology & somatic data on deconstructing high-demand belief systems.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Evidence Feed | Ghost Dogmas Research Bank">
+  <meta name="twitter:description" content="Peer-reviewed neuroscience, evolutionary biology & somatic data on deconstructing high-demand belief systems.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Menlo', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .feed-card-anim {
+      animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 min-h-screen font-sans antialiased selection:bg-amber-500 selection:text-black pb-28">
+
+  <!-- Top Global Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-neutral-950/85 border-b border-neutral-800/90 transition-all">
+    <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center text-amber-400 hover:border-amber-400 transition" title="Back to Ghost Dogmas Home">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v8M4.93 10.93 6.34 12.34M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M8 22l4-10 4 10"/>
+          </svg>
+        </a>
+        <div>
+          <a href="index.html" class="font-bold tracking-tight text-base sm:text-lg text-white hover:text-amber-300 transition">
+            Ghost Dogmas <span class="text-amber-400 font-serif italic text-xs sm:text-sm">/ Evidence Feed</span>
+          </a>
+          <p class="text-[11px] text-neutral-400 hidden sm:block">Peer-reviewed neuroscience, evolutionary biology & somatic data</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <a href="companion-score.html" class="text-xs text-neutral-400 hover:text-white px-2.5 py-1.5 rounded-lg border border-neutral-800 hover:border-neutral-700 transition hidden sm:inline-flex items-center space-x-1">
+          <span>Score</span>
+        </a>
+        <a href="deep-dive.html" class="text-xs text-neutral-400 hover:text-white px-2.5 py-1.5 rounded-lg border border-neutral-800 hover:border-neutral-700 transition hidden xs:inline-block">
+          Deep Dive
+        </a>
+        <a href="index.html#order" class="text-xs font-semibold bg-amber-500 hover:bg-amber-400 text-neutral-950 px-3 py-1.5 rounded-full font-sans transition flex items-center space-x-1 shadow-sm">
+          <span>Read Book</span>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="max-w-2xl mx-auto px-4 pb-2">
+      <div class="relative flex items-center">
+        <svg class="w-4 h-4 text-neutral-500 absolute left-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search claims, mechanisms (CCK, vagus, placebo, insula)..." 
+          class="w-full bg-neutral-900 border border-neutral-800 rounded-xl pl-9 pr-8 py-1.5 text-xs text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-amber-500/70 transition"
+        >
+        <button id="clear-search" class="absolute right-2.5 text-neutral-500 hover:text-neutral-300 hidden text-xs p-1" title="Clear search">
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <!-- Sticky Filter Pills -->
+    <div class="max-w-2xl mx-auto px-4 pb-2.5 flex space-x-2 overflow-x-auto text-xs no-scrollbar" id="category-pills">
+      <button data-cat="all" class="cat-pill active bg-amber-500 text-neutral-950 font-bold px-3 py-1 rounded-full whitespace-nowrap transition shadow-sm">
+        All Evidence (<span id="count-all">0</span>)
+      </button>
+      <button data-cat="Biochemistry" class="cat-pill bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white px-3 py-1 rounded-full whitespace-nowrap transition">
+        #Biochemistry (<span id="count-biochem">0</span>)
+      </button>
+      <button data-cat="EvolutionaryBiology" class="cat-pill bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white px-3 py-1 rounded-full whitespace-nowrap transition">
+        #EvolutionaryBiology (<span id="count-evobio">0</span>)
+      </button>
+      <button data-cat="SomaticInterventions" class="cat-pill bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white px-3 py-1 rounded-full whitespace-nowrap transition">
+        #SomaticInterventions (<span id="count-somatic">0</span>)
+      </button>
+      <button data-cat="Neuroplasticity" class="cat-pill bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white px-3 py-1 rounded-full whitespace-nowrap transition">
+        #Neuroplasticity (<span id="count-neuro">0</span>)
+      </button>
+      <button data-cat="SocialLineage" class="cat-pill bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white px-3 py-1 rounded-full whitespace-nowrap transition">
+        #SocialLineage (<span id="count-social">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- Feed Container -->
+  <main class="max-w-2xl mx-auto px-4 py-6">
+
+    <!-- Active Filter Indicator & Reset -->
+    <div id="filter-status" class="hidden mb-4 flex items-center justify-between text-xs text-neutral-400 bg-neutral-900/60 border border-neutral-800/80 px-3 py-2 rounded-xl">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span id="filter-status-text">Filtering</span>
+      </div>
+      <button id="reset-filter-btn" class="text-amber-400 hover:underline">Reset</button>
+    </div>
+
+    <!-- Feed Stream -->
+    <div id="posts-container" class="space-y-6">
+      <!-- Cards rendered via JS -->
+    </div>
+
+    <!-- Loading Sentinel / Infinite Scroll Indicator -->
+    <div id="scroll-sentinel" class="py-8 flex flex-col items-center justify-center space-y-2">
+      <div id="loading-spinner" class="w-6 h-6 border-2 border-neutral-700 border-t-amber-400 rounded-full animate-spin"></div>
+      <span id="end-of-feed" class="text-xs text-neutral-500 font-mono hidden">End of research feed • All papers loaded</span>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-neutral-900 border border-amber-500/50 text-neutral-100 px-4 py-2.5 rounded-full text-xs shadow-2xl transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center space-x-2">
+    <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- Sticky Lead Magnet Bar -->
+  <aside id="lead-magnet-bar" class="fixed bottom-0 left-0 right-0 z-30 backdrop-blur-md bg-neutral-950/90 border-t border-neutral-800 py-3 px-4 shadow-2xl transition-transform duration-300">
+    <div class="max-w-2xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center space-x-3 overflow-hidden">
+        <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0 animate-pulse"></span>
+        <p class="text-xs text-neutral-300 truncate">
+          <span class="font-semibold text-white">Get the complete neurobiology roadmap:</span>
+          <span class="italic text-neutral-400">Ghost Dogmas by Mario Botha</span>
+        </p>
+      </div>
+      <div class="flex items-center space-x-2 shrink-0">
+        <a href="index.html#order" class="text-xs font-semibold bg-amber-500 hover:bg-amber-400 text-neutral-950 px-3 py-1.5 rounded-full transition whitespace-nowrap shadow-sm">
+          Get the Book &rarr;
+        </a>
+        <button id="dismiss-lead-bar" class="text-neutral-500 hover:text-neutral-300 p-1 text-xs" title="Dismiss banner">
+          ✕
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="feed-app.js"></script>
+</body>
+</html>
